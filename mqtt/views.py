@@ -11,5 +11,6 @@ topics = ['test', 'test2', 'etc']
 def index(request):
     #todo: build dashboard here
     pass
+#threading: starts and maintains MQTT subscription in the background, using run(topics) function from helper
 thread = threading.Thread(target=run, name="MQTT_Subscribe", args=[topics])
 thread.start()
